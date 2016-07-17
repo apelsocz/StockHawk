@@ -10,7 +10,6 @@ import android.widget.RemoteViews;
 
 import com.sam_chordas.android.stockhawk.MyStocksActivity;
 import com.sam_chordas.android.stockhawk.R;
-import com.sam_chordas.android.stockhawk.service.StockTaskService;
 
 /**
  * Created by adam on 16-07-16.
@@ -40,11 +39,9 @@ public class StockWidgetProvider extends AppWidgetProvider {
     @Override
     public void onReceive(Context context, Intent intent) {
         super.onReceive(context, intent);
-        if (intent.getAction().equals(StockTaskService.ACTION_STOCK_UPDATED)) {
-            AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
-            int[] appWidgetIds = appWidgetManager.getAppWidgetIds(
-                    new ComponentName(context, getClass()));
-            appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.widget_list);
-        }
+        AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
+        int[] appWidgetIds = appWidgetManager.getAppWidgetIds(
+                new ComponentName(context, getClass()));
+        appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.widget_list);
     }
 }

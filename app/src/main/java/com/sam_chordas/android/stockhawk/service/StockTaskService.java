@@ -34,8 +34,6 @@ import java.util.Locale;
  */
 public class StockTaskService extends GcmTaskService {
 
-    public static final String ACTION_STOCK_UPDATED = "stockHawkUpdated";
-
     private String LOG_TAG = StockTaskService.class.getSimpleName();
 
     private OkHttpClient client = new OkHttpClient();
@@ -168,9 +166,7 @@ public class StockTaskService extends GcmTaskService {
                                 QuoteProvider.AUTHORITY,
                                 Utils.quoteJsonToContentVals(getResponse)
                         );
-                        Intent updateWidgetIntent = new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
-                        updateWidgetIntent.setAction(ACTION_STOCK_UPDATED);
-                        mContext.sendBroadcast(updateWidgetIntent);
+                        mContext.sendBroadcast(new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE));
                     } catch (RemoteException | OperationApplicationException e) {
                         Log.e(LOG_TAG, "Error applying batch insert", e);
                     }
