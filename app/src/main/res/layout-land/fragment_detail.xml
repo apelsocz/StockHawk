@@ -1,0 +1,543 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:layout_marginLeft="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="16dp"
+    android:layoutDirection="locale"
+    android:textDirection="locale">
+
+    <com.github.mikephil.charting.charts.CandleStickChart
+        android:id="@+id/detail_chart_candlestick"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_columnSpan="2"
+        app:layout_rowWeight="10"/>
+
+    <android.support.v7.widget.GridLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:columnCount="4">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="@string/detail_symbol"
+            android:gravity="fill"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+        <TextView
+            android:id="@+id/detail_symbol"
+            android:layout_height="wrap_content"
+            android:gravity="fill"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="22sp"
+            android:fontFamily="monospace"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            app:layout_gravity="fill"
+            tools:text="ABCD"/>
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="@string/detail_bid"
+            android:gravity="fill"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+        <TextView
+            android:id="@+id/detail_bid"
+            android:layout_height="wrap_content"
+            android:gravity="fill"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="22sp"
+            android:fontFamily="monospace"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            app:layout_gravity="fill"
+            tools:text="123.45"/>
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="@string/detail_percent_change"
+            android:gravity="fill"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+        <TextView
+            android:id="@+id/detail_percent_change"
+            android:layout_height="wrap_content"
+            android:gravity="fill"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="22sp"
+            android:fontFamily="monospace"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            app:layout_gravity="fill"
+            tools:text="- 0.12 %"/>
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="@string/detail_change"
+            android:gravity="fill"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+        <TextView
+            android:id="@+id/detail_change"
+            android:layout_height="wrap_content"
+            android:gravity="fill"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="22sp"
+            android:fontFamily="monospace"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            app:layout_gravity="fill"
+            tools:text="- 0.34"/>
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="@string/detail_days_low"
+            android:gravity="fill"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-light"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+        <TextView
+            android:id="@+id/detail_days_low"
+            android:layout_height="wrap_content"
+            android:gravity="fill"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="22sp"
+            android:fontFamily="monospace"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            app:layout_gravity="fill"
+            tools:text="123.45 (USD)"/>
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="@string/detail_years_low"
+            android:gravity="fill"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+        <TextView
+            android:id="@+id/detail_years_low"
+            android:layout_height="wrap_content"
+            android:gravity="fill"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="22sp"
+            android:fontFamily="monospace"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            app:layout_gravity="fill"
+            tools:text="123.45"/>
+
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="@string/detail_days_high"
+            android:gravity="fill"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+        <TextView
+            android:id="@+id/detail_days_high"
+            android:layout_height="wrap_content"
+            android:gravity="fill"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="22sp"
+            android:fontFamily="monospace"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            app:layout_gravity="fill"
+            tools:text="123.45 (USD)"/>
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="@string/detail_detail_years_high"
+            android:gravity="fill"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+        <TextView
+            android:id="@+id/detail_years_high"
+            android:layout_height="wrap_content"
+            android:gravity="fill"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="22sp"
+            android:fontFamily="monospace"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            app:layout_gravity="fill"
+            tools:text="123.45"/>
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="@string/detail_volume"
+            android:gravity="fill"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+        <TextView
+            android:id="@+id/detail_volume"
+            android:layout_height="wrap_content"
+            android:gravity="fill"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="22sp"
+            android:fontFamily="monospace"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            app:layout_gravity="fill"
+            tools:text="0,123,456,789"/>
+
+
+
+
+    </android.support.v7.widget.GridLayout>
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+<!--<LinearLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:layout_marginTop="?attr/actionBarSize"-->
+    <!--android:layout_marginLeft="16dp"-->
+    <!--android:layout_marginStart="16dp"-->
+    <!--android:layout_marginRight="16dp"-->
+    <!--android:layout_marginEnd="16dp"-->
+    <!--android:paddingTop="8dp">-->
+
+    <!--<com.github.mikephil.charting.charts.CandleStickChart-->
+        <!--android:id="@+id/detail_chart_candlestick"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:layout_marginBottom="16dp"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"/>-->
+
+    <!--<android.support.v7.widget.GridLayout-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--xmlns:tools="http://schemas.android.com/tools"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--app:columnCount="2">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/detail_name"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:textColor="@color/textColorPrimary"-->
+            <!--android:textSize="22sp"-->
+            <!--android:fontFamily="sans-serif-smallcaps"-->
+            <!--app:layout_gravity="fill"-->
+            <!--app:layout_columnSpan="2"-->
+            <!--tools:text="Stock Symbol Name"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/detail_symbol"-->
+            <!--android:gravity="fill"-->
+            <!--android:textColor="@color/textColorSecondary"-->
+            <!--android:textSize="16sp"-->
+            <!--android:fontFamily="sans-serif-light"-->
+            <!--app:layout_gravity="fill"-->
+            <!--app:layout_rowWeight="1" />-->
+        <!--<TextView-->
+            <!--android:id="@+id/detail_symbol"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="fill"-->
+            <!--android:textColor="@color/textColorPrimary"-->
+            <!--android:textSize="18sp"-->
+            <!--android:fontFamily="monospace"-->
+            <!--android:paddingLeft="16dp"-->
+            <!--android:paddingStart="16dp"-->
+            <!--app:layout_gravity="fill"-->
+            <!--tools:text="ABCD"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/detail_bid"-->
+            <!--android:gravity="fill"-->
+            <!--android:textColor="@color/textColorSecondary"-->
+            <!--android:textSize="16sp"-->
+            <!--android:fontFamily="sans-serif-light"-->
+            <!--app:layout_gravity="fill"-->
+            <!--app:layout_rowWeight="1" />-->
+        <!--<TextView-->
+            <!--android:id="@+id/detail_bid"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="fill"-->
+            <!--android:textColor="@color/textColorPrimary"-->
+            <!--android:textSize="18sp"-->
+            <!--android:fontFamily="monospace"-->
+            <!--android:paddingLeft="16dp"-->
+            <!--android:paddingStart="16dp"-->
+            <!--app:layout_gravity="fill"-->
+            <!--tools:text="123.45 (USD)"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/detail_percent_change"-->
+            <!--android:gravity="fill"-->
+            <!--android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+            <!--android:textColor="@color/textColorSecondary"-->
+            <!--android:textSize="16sp"-->
+            <!--android:fontFamily="sans-serif-light"-->
+            <!--app:layout_gravity="fill"-->
+            <!--app:layout_rowWeight="1" />-->
+        <!--<TextView-->
+            <!--android:id="@+id/detail_percent_change"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="fill"-->
+            <!--android:textColor="@color/textColorPrimary"-->
+            <!--android:textSize="18sp"-->
+            <!--android:fontFamily="monospace"-->
+            <!--android:paddingLeft="16dp"-->
+            <!--android:paddingStart="16dp"-->
+            <!--app:layout_gravity="fill"-->
+            <!--tools:text="- 0.12 %"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/detail_change"-->
+            <!--android:gravity="fill"-->
+            <!--android:textColor="@color/textColorSecondary"-->
+            <!--android:textSize="16sp"-->
+            <!--android:fontFamily="sans-serif-light"-->
+            <!--app:layout_gravity="fill"-->
+            <!--app:layout_rowWeight="1" />-->
+        <!--<TextView-->
+            <!--android:id="@+id/detail_change"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="fill"-->
+            <!--android:textColor="@color/textColorPrimary"-->
+            <!--android:textSize="18sp"-->
+            <!--android:fontFamily="monospace"-->
+            <!--android:paddingLeft="16dp"-->
+            <!--android:paddingStart="16dp"-->
+            <!--app:layout_gravity="end|fill"-->
+            <!--tools:text="- 0.34"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/detail_days_low"-->
+            <!--android:gravity="fill"-->
+            <!--android:textColor="@color/textColorSecondary"-->
+            <!--android:textSize="16sp"-->
+            <!--android:fontFamily="sans-serif-light"-->
+            <!--app:layout_gravity="fill"-->
+            <!--app:layout_rowWeight="1" />-->
+        <!--<TextView-->
+            <!--android:id="@+id/detail_days_low"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="fill"-->
+            <!--android:textColor="@color/textColorPrimary"-->
+            <!--android:textSize="18sp"-->
+            <!--android:fontFamily="monospace"-->
+            <!--android:paddingLeft="16dp"-->
+            <!--android:paddingStart="16dp"-->
+            <!--app:layout_gravity="fill"-->
+            <!--tools:text="123.45 (USD)"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/detail_days_high"-->
+            <!--android:gravity="fill"-->
+            <!--android:textColor="@color/textColorSecondary"-->
+            <!--android:textSize="16sp"-->
+            <!--android:fontFamily="sans-serif-light"-->
+            <!--app:layout_gravity="fill"-->
+            <!--app:layout_rowWeight="1" />-->
+        <!--<TextView-->
+            <!--android:id="@+id/detail_days_high"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="fill"-->
+            <!--android:textColor="@color/textColorPrimary"-->
+            <!--android:textSize="18sp"-->
+            <!--android:fontFamily="monospace"-->
+            <!--android:paddingLeft="16dp"-->
+            <!--android:paddingStart="16dp"-->
+            <!--app:layout_gravity="fill"-->
+            <!--tools:text="123.45 (USD)"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/detail_years_low"-->
+            <!--android:gravity="fill"-->
+            <!--android:textColor="@color/textColorSecondary"-->
+            <!--android:textSize="16sp"-->
+            <!--android:fontFamily="sans-serif-light"-->
+            <!--app:layout_gravity="fill"-->
+            <!--app:layout_rowWeight="1" />-->
+        <!--<TextView-->
+            <!--android:id="@+id/detail_years_low"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="fill"-->
+            <!--android:textColor="@color/textColorPrimary"-->
+            <!--android:textSize="18sp"-->
+            <!--android:fontFamily="monospace"-->
+            <!--android:paddingLeft="16dp"-->
+            <!--android:paddingStart="16dp"-->
+            <!--app:layout_gravity="fill"-->
+            <!--tools:text="123.45 (USD)"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/detail_detail_years_high"-->
+            <!--android:gravity="fill"-->
+            <!--android:textColor="@color/textColorSecondary"-->
+            <!--android:textSize="16sp"-->
+            <!--android:fontFamily="sans-serif-light"-->
+            <!--app:layout_gravity="fill"-->
+            <!--app:layout_rowWeight="1" />-->
+        <!--<TextView-->
+            <!--android:id="@+id/detail_years_high"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="fill"-->
+            <!--android:textColor="@color/textColorPrimary"-->
+            <!--android:textSize="18sp"-->
+            <!--android:fontFamily="monospace"-->
+            <!--android:paddingLeft="16dp"-->
+            <!--android:paddingStart="16dp"-->
+            <!--app:layout_gravity="fill"-->
+            <!--tools:text="123.45 (USD)"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/detail_volume"-->
+            <!--android:gravity="fill"-->
+            <!--android:textColor="@color/textColorSecondary"-->
+            <!--android:textSize="16sp"-->
+            <!--android:fontFamily="sans-serif-light"-->
+            <!--app:layout_gravity="fill"-->
+            <!--app:layout_rowWeight="1" />-->
+        <!--<TextView-->
+            <!--android:id="@+id/detail_volume"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="fill"-->
+            <!--android:textColor="@color/textColorPrimary"-->
+            <!--android:textSize="18sp"-->
+            <!--android:fontFamily="monospace"-->
+            <!--android:paddingLeft="16dp"-->
+            <!--android:paddingStart="16dp"-->
+            <!--app:layout_gravity="fill"-->
+            <!--tools:text="0,123,456,789"/>-->
+
+    <!--</android.support.v7.widget.GridLayout>-->
+
+
+<!--</LinearLayout>-->

@@ -1,0 +1,23 @@
+<resources>
+    <string name="action_settings">إعدادات</string>
+    <string name="action_change_units">وحدات التغيير</string>
+    <string name="symbol_search">رمز البحث</string>
+    <string name="content_test">بحث عن الأوراق المالية رمز</string>
+    <string name="network_snackbar">هذا التطبيق يتطلب اتصال بالإنترنت</string>
+    <string name="message_exist">يتم حفظ هذه الأسهم بالفعل!</string>
+    <string name="message_invalid">هذا ليس صحيحا الأسهم</string>
+
+    <string name="detail_symbol">رمز</string>
+    <string name="detail_bid">عرض</string>
+    <string name="detail_percent_change">نسبة التغيير</string>
+    <string name="detail_change">تغيير</string>
+    <string name="detail_volume">الصوت</string>
+    <string name="detail_average_volume">متوسط ​​اليومي</string>
+    <string name="detail_days_low">اليوم منخفضة</string>
+    <string name="detail_days_high">يوم عظيم</string>
+    <string name="detail_years_low">العام منخفضة</string>
+    <string name="detail_detail_years_high">السنة السامي</string>
+
+    <string name="empty_forecast_list">لا يوجد مخزون معلومات متوفرة</string>
+
+</resources>
